@@ -6,8 +6,7 @@ var UserSchema = new mongoose.Schema({
     lastName: String,
     email: String,
     orders: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref:"Order"
+        type: String
     }],
     customerID: String
 });
