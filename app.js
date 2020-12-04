@@ -29,7 +29,7 @@ app.use(new session({
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(passport.initialize());
 appp.use(passport.session());
-passport.use(new passportLocal(User.authenticate()));
+passport.use(new passportLocal({usernameField: 'email'} ,User.authenticate()));
 passport.serializeUser();
 passport.deserializeUser();
 
