@@ -16,7 +16,7 @@ router.get("/catalog", (req, res) => {
 });
 
 //genre search
-router.get("/catalog/:genreID", (req, res) => {
+router.get("/catalog/genre/:genreID", (req, res) => {
     var genre = req.params.genreID;
 
     Book.find({genre}, (err, foundBooks) => {
