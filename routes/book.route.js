@@ -29,4 +29,13 @@ router.get("/catalog/genre/:genreID", (req, res) => {
     });
 });
 
+//title search
+router.get("catalog/title/:title", (res, req) => {
+    var title = req.params.title;
+
+    Book.find({title}, (err, foundBooks) => {
+        
+    });
+});
+
 module.exports = router;
